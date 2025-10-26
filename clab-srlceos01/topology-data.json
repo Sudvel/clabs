@@ -1,0 +1,101 @@
+{
+  "name": "srlceos01",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-56dc11ff5563",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPSrdWgS/HMmfawhVyJsCrcCuQvyzLc6bwaHSpSCU3jC"],
+  "nodes": {
+    "ceos": {
+      "index": "0",
+      "shortname": "ceos",
+      "longname": "clab-srlceos01-ceos",
+      "fqdn": "ceos.srlceos01.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-srlceos01/ceos",
+      "kind": "arista_ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:8e:90:ba",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56dc11ff5563",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-srlceos01/ceos",
+        "clab-node-longname": "clab-srlceos01-ceos",
+        "clab-node-name": "ceos",
+        "clab-node-type": "",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/quick_start.clab.yml",
+        "containerlab": "srlceos01"
+      },
+      "port-bindings": [
+      ]
+    },
+    "srl": {
+      "index": "1",
+      "shortname": "srl",
+      "longname": "clab-srlceos01-srl",
+      "fqdn": "srl.srlceos01.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-srlceos01/srl",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:bb:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-56dc11ff5563",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-srlceos01/srl",
+        "clab-node-longname": "clab-srlceos01-srl",
+        "clab-node-name": "srl",
+        "clab-node-type": "ixr-d2l",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/quick_start.clab.yml",
+        "containerlab": "srlceos01"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "srl",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:ce:dd:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "ceos",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:27:dc:c2",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
