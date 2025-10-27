@@ -1,0 +1,699 @@
+{
+  "name": "dc1",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "srl-mgmt",
+        "bridge": "br-b8c560525b9c",
+        "ipv4-subnet": "172.20.0.0/24",
+        "ipv4-gw": "172.20.0.1",
+        "ipv6-subnet": "2001:172:20::/80",
+        "ipv6-gw": "2001:172:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPSrdWgS/HMmfawhVyJsCrcCuQvyzLc6bwaHSpSCU3jC"],
+  "nodes": {
+    "bl1": {
+      "index": "0",
+      "shortname": "bl1",
+      "longname": "clab-dc1-bl1",
+      "fqdn": "bl1.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/bl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::8",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:bd:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/bl1",
+        "clab-node-longname": "clab-dc1-bl1",
+        "clab-node-name": "bl1",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "bl2": {
+      "index": "1",
+      "shortname": "bl2",
+      "longname": "clab-dc1-bl2",
+      "fqdn": "bl2.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/bl2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.102",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::5",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:09:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/bl2",
+        "clab-node-longname": "clab-dc1-bl2",
+        "clab-node-name": "bl2",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h1": {
+      "index": "2",
+      "shortname": "h1",
+      "longname": "clab-dc1-h1",
+      "fqdn": "h1.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/h1",
+      "kind": "linux",
+      "image": "docker.io/akpinar/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::d",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/h1",
+        "clab-node-longname": "clab-dc1-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h2": {
+      "index": "3",
+      "shortname": "h2",
+      "longname": "clab-dc1-h2",
+      "fqdn": "h2.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/h2",
+      "kind": "linux",
+      "image": "docker.io/akpinar/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::c",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/h2",
+        "clab-node-longname": "clab-dc1-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h3": {
+      "index": "4",
+      "shortname": "h3",
+      "longname": "clab-dc1-h3",
+      "fqdn": "h3.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/h3",
+      "kind": "linux",
+      "image": "docker.io/akpinar/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::b",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/h3",
+        "clab-node-longname": "clab-dc1-h3",
+        "clab-node-name": "h3",
+        "clab-node-type": "",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h4": {
+      "index": "5",
+      "shortname": "h4",
+      "longname": "clab-dc1-h4",
+      "fqdn": "h4.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/h4",
+      "kind": "linux",
+      "image": "docker.io/akpinar/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::a",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/h4",
+        "clab-node-longname": "clab-dc1-h4",
+        "clab-node-name": "h4",
+        "clab-node-type": "",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "l1": {
+      "index": "6",
+      "shortname": "l1",
+      "longname": "clab-dc1-l1",
+      "fqdn": "l1.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/l1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::3",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:73:06:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/l1",
+        "clab-node-longname": "clab-dc1-l1",
+        "clab-node-name": "l1",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "l2": {
+      "index": "7",
+      "shortname": "l2",
+      "longname": "clab-dc1-l2",
+      "fqdn": "l2.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/l2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::7",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:4e:07:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/l2",
+        "clab-node-longname": "clab-dc1-l2",
+        "clab-node-name": "l2",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "l3": {
+      "index": "8",
+      "shortname": "l3",
+      "longname": "clab-dc1-l3",
+      "fqdn": "l3.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/l3",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::4",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:a8:08:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/l3",
+        "clab-node-longname": "clab-dc1-l3",
+        "clab-node-name": "l3",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "l4": {
+      "index": "9",
+      "shortname": "l4",
+      "longname": "clab-dc1-l4",
+      "fqdn": "l4.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/l4",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::9",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:67:09:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/l4",
+        "clab-node-longname": "clab-dc1-l4",
+        "clab-node-name": "l4",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "s1": {
+      "index": "10",
+      "shortname": "s1",
+      "longname": "clab-dc1-s1",
+      "fqdn": "s1.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/s1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::6",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:c7:0a:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/s1",
+        "clab-node-longname": "clab-dc1-s1",
+        "clab-node-name": "s1",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "s2": {
+      "index": "11",
+      "shortname": "s2",
+      "longname": "clab-dc1-s2",
+      "fqdn": "s2.dc1.io",
+      "group": "",
+      "labdir": "/home/sudvel/clabs/clab-dc1/s2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.0.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20::2",
+      "mgmt-ipv6-prefix-length": 80,
+      "mac-address": "1a:4d:0b:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b8c560525b9c",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/sudvel/clabs/clab-dc1/s2",
+        "clab-node-longname": "clab-dc1-s2",
+        "clab-node-name": "s2",
+        "clab-node-type": "ixr-d3",
+        "clab-owner": "sudvel",
+        "clab-topo-file": "/home/sudvel/clabs/dc2.yml",
+        "containerlab": "dc1"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:ff:df:bb",
+          "peer": "z"
+        },
+        "z": {
+          "node": "bl1",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:0c:6a:ea",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:78:cc:43",
+          "peer": "z"
+        },
+        "z": {
+          "node": "bl2",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:9d:c9:4c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-33",
+          "mac": "aa:c1:ab:65:19:1d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "bl1",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:1b:7e:8e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-34",
+          "mac": "aa:c1:ab:3e:bd:f8",
+          "peer": "z"
+        },
+        "z": {
+          "node": "bl2",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:a7:60:46",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:fe:1a:9a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:c6:32:a0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:48:ef:d7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:72:8b:f3",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:e6:eb:3a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l3",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:d2:68:0a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:6b:d3:2d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l4",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:e1:a3:0e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:70:4f:e5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:03:68:2b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:94:a0:68",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:4d:d2:ce",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-3",
+          "mac": "aa:c1:ab:d5:a0:19",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l3",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:60:ea:62",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:96:da:4a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l4",
+          "interface": "e1-4",
+          "mac": "aa:c1:ab:c9:12:de",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l1",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:77:ad:d3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:5e:8c:5c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l2",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:10:1a:af",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c1:90:e2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l3",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:6b:9e:63",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:1e:ac:bb",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l4",
+          "interface": "e1-10",
+          "mac": "aa:c1:ab:85:70:a7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:93:7b:c7",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
